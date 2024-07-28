@@ -5,9 +5,8 @@ Dans le cadre d’une recherche qui va être mené au Centre Hospitalier Région
 1-	Elaboration de l’outil de collecte
 - Le formulaire de collecte devra être développé sur Streamlit et permettre les enregistrements doivent se faire dans une base de données SQLite ou un fichier Microsoft Excel.
 Les variables d’intérêt sont présentées dans le tableau ci-dessous :
-Facteurs	Variable	Type de variable	Modalités
-Pathologie	Hypertension artérielle	Nominale 	Compensée
-Décompensée
+
+
 +----------------------------------------------+---------------------------+-----------------------+--------------------------+
 +               Facteurs                       +      Variables            +         Type          +         Modalités        +
 +----------------------------------------------+---------------------------+-----------------------+--------------------------+
