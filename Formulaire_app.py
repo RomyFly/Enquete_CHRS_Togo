@@ -30,8 +30,23 @@ c.execute("""CREATE TABLE IF NOT EXISTS REPONSES (
     solitude TEXT NOT NULL,
     relation_conflictuelle TEXT NOT NULL,
     meconnaissance_fr_hta TEXT NOT NULL,
-    manque de soutien TEXT NOT NULL
+    manque_soutien TEXT NOT NULL
     )
            """)          
 conn.commit()
 conn.close()
+
+
+#Création de la fonction d'insertion des données dans la table REPONSES de la base de données
+
+def insert_data(pathologie, sexe, date_naissance, niveau_etude,type_profession, 
+                nbre_heure_sport_hebdo, solitude, relation_conflictuelle, 
+                meconnaissance_fr_hta, manque_soutien):
+    c.execute(""" INSERT INTO REPONSES (pathologie, sexe, date_naissance, niveau_etude,type_profession,
+                    nbre_heure_sport_hebdo, solitude, relation_conflictuelle,
+                    meconnaissance_fr_hta, manque_soutien) VALUES(?,?,?,?,?,?,?,?,?,?)
+              """,
+              (pathologie, sexe, date_naissance, niveau_etude,type_profession,
+                              nbre_heure_sport_hebdo, solitude, relation_conflictuelle,
+                              meconnaissance_fr_hta, manque_soutien))
+    conn.commit()
