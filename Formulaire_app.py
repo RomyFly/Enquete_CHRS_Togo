@@ -18,21 +18,20 @@ c = conn.cursor()
 
 #Création de la table
 
-c.execute("""CREATE TABLE IF NOT EXISTS RESPONSES (
+c.execute("""CREATE TABLE IF NOT EXISTS REPONSES (
     
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     pathologie TEXT NOT NULL,
     sexe TEXT NOT NULL,
-    age INTEGER NOT NULL,
+    date_naissance TEXT NOT NULL,
     niveau_etude TEXT NOT NULL,
-    situation_matrimoniale TEXT NOT NULL,
+    type_profession TEXT NOT NULL,
+    nbre_heure_sport_hebdo INTEGER NOT NULL,
     solitude TEXT NOT NULL,
     relation_conflictuelle TEXT NOT NULL,
     meconnaissance_fr_hta TEXT NOT NULL,
-    manque de soutien TEXT NOT NULL,
-    conception_mystique_hta text NOT NULL
+    manque de soutien TEXT NOT NULL
     )
-           """)
-           
+           """)          
 conn.commit()
 conn.close()
